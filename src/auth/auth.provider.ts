@@ -36,9 +36,6 @@ export class AuthService {
 
         if(!pwdMatch) throw new ForbiddenException("Credentials are incorrect");
 
-        // const { hash , ...filteredObject } = user;
-        // console.log(filteredObject, 'filter')
-
          return this.generateToken(user.email);
     }
 
